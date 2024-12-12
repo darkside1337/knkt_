@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres_db_knkt
+      POSTGRES_PASSWORD: password_db_knkt
+      POSTGRES_DB: knkt
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
